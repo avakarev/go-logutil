@@ -17,7 +17,7 @@ func SetLevel(name string) error {
 		return err
 	}
 	zerolog.SetGlobalLevel(level)
-	log.Debug().Msgf("log level is set to %q", name)
+	log.Debug().Str("level", name).Msg("log level is set")
 	return nil
 }
 
